@@ -4,10 +4,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {StatusPipe} from './pipes/status.pipe';
-import {StatusIcon} from './pipes/status-icon.pipe';
 
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
+import {StatusIconPipe} from './pipes/status-icon.pipe';
+import {FilterPipe} from './pipes/filter.pipe';
+import {FormsModule} from '@angular/forms';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -19,7 +21,9 @@ registerLocaleData(localePt, 'pt-BR');
     BrowserModule,
     AppRoutingModule,
     StatusPipe,
-    StatusIcon
+    StatusIconPipe,
+    FilterPipe,
+    FormsModule
   ],
   providers: [
     {
